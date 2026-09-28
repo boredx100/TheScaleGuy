@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Scale Guy | Arizona Scale Sales, Service & Calibration</title>
+
+  <meta name="description"
+        content="The Scale Guy is coming soon. Arizona scale sales, service, calibration and repairs, plus online sales of scales, indicators, load cells, parts and weighing supplies.">
+
+  <style>
+    :root {
+      --orange: #f47a20;
+      --orange-dark: #c94f14;
+      --yellow: #ffb52e;
+      --black: #111111;
+      --dark: #1b1b1b;
+      --gray: #a9a9a9;
+      --light: #f5f5f5;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 60px 0;
+      background:
+        radial-gradient(circle at top, #342013 0%, #181818 45%, #0c0c0c 100%);
+    }
+
+    .hero-content {
+      width: 100%;
+    }
+
+    .logo {
+      display: block;
+      max-width: 720px;
+      width: 90%;
+      height: auto;
+      margin: 0 auto 30px;
+    }
+
+    .coming-soon {
+      display: inline-block;
+      color: var(--black);
+      background: var(--orange);
+      padding: 8px 18px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 4.5rem);
+      line-height: 1.05;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .orange {
+      color: var(--orange);
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 30px;
+      color: #d7d7d7;
+      font-size: 1.15rem;
+    }
+
+    .arizona {
+      font-size: 1.25rem;
+      font-weight: 900;
+      letter-spacing: 3px;
+      color: var(--yellow);
+      margin-top: 25px;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 75px 0;
+    }
+
+    .section-light {
+      background: var(--light);
+      color: var(--black);
+    }
+
+    .section-dark {
+      background: var(--dark);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 45px;
+      color: #555;
+      font-size: 1.1rem;
+    }
+
+    .section-dark .section-intro {
+      color: #cfcfcf;
+    }
+
+    /* CARDS */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      background: var(--white);
+      color: var(--black);
+      padding: 35px;
+      border-radius: 8px;
+      border-top: 5px solid var(--orange);
+      box-shadow: 0 10px 30px rgba(0,0,0,.12);
+    }
+
+    .card h3 {
+      color: var(--orange-dark);
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .card p {
+      margin-bottom: 15px;
+    }
+
+    .card ul {
+      list-style: none;
+    }
+
+    .card li {
+      padding: 7px 0;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .card li:last-child {
+      border-bottom: none;
+    }
+
+    /* STATEMENT */
+
+    .statement {
+      text-align: center;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .statement h2 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: 20px;
+    }
+
+    .statement p {
+      color: #ccc;
+      font-size: 1.15rem;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: 20px;
+    }
+
+    .contact p {
+      color: #ccc;
+      margin-bottom: 25px;
+    }
+
+    .contact-info {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin: 25px 0;
+    }
+
+    .contact-info a {
+      color: var(--orange);
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    /* JOKE */
+
+    .bathroom-scale {
+      margin-top: 55px;
+      padding-top: 35px;
+      border-top: 1px solid #444;
+      color: #aaa;
+    }
+
+    .bathroom-scale strong {
+      display: block;
+      color: #ddd;
+      font-size: 1rem;
+      margin-bottom: 3px;
+    }
+
+    .bathroom-scale span {
+      font-size: .85rem;
+      font-style: italic;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #070707;
+      text-align: center;
+      padding: 30px 15px;
+      color: #777;
+      font-size: .85rem;
+    }
+
+    footer strong {
+      color: var(--orange);
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+      .hero {
+        min-height: auto;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .card {
+        padding: 28px;
+      }
+
+      .logo {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero-content">
+
+      <!-- Put logo.png in the same folder as this file -->
+      <img src="logo.png"
+           alt="The Scale Guy - Sales, Service, Calibration and Repairs"
+           class="logo">
+
+      <div class="coming-soon">COMING SOON</div>
+
+      <h1>
+        Arizona Scale Service.<br>
+        <span class="orange">Online Scale Sales.</span>
+      </h1>
+
+      <p>
+        The Scale Guy is getting ready to provide straightforward
+        scale sales, service, calibration, troubleshooting and repairs
+        throughout Arizona, along with an online store for scales,
+        indicators, load cells, parts and weighing supplies.
+      </p>
+
+      <div class="arizona">100% ARIZONA</div>
+
+    </div>
+  </header>
+
+
+  <!-- WHAT'S COMING -->
+  <section class="section-light">
+    <div class="container">
+
+      <h2 class="section-title">What's Coming</h2>
+
+      <p class="section-intro">
+        Field service in Arizona. Scale equipment and supplies available
+        online nationwide.
+      </p>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>Arizona Field Service</h3>
+
+          <p>
+            On-site scale service, calibration, verification,
+            troubleshooting and repair.
+          </p>
+
+          <ul>
+            <li>Floor & Platform Scales</li>
+            <li>Bench Scales</li>
+            <li>Livestock Scales</li>
+            <li>Indicators</li>
+            <li>Load Cells</li>
+            <li>Calibration & Verification</li>
+            <li>Troubleshooting & Repairs</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Online Scale Store</h3>
+
+          <p>
+            Practical weighing equipment and replacement components
+            shipped nationwide.
+          </p>
+
+          <ul>
+            <li>Complete Scales</li>
+            <li>Floor Scales</li>
+            <li>Bench Scales</li>
+            <li>Indicators</li>
+            <li>Load Cells</li>
+            <li>Parts & Accessories</li>
+            <li>Weighing Supplies</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- PHILOSOPHY -->
+  <section class="section-dark">
+    <div class="container statement">
+
+      <h2>
+        Scale Service Without
+        <span class="orange">The Circus.</span>
+      </h2>
+
+      <p>
+        Straightforward service. Practical equipment.
+        Clear answers. Whether you have a scale that needs attention
+        in Arizona or need weighing equipment shipped across the country,
+        The Scale Guy is being built to make the process simple.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- CONTACT / PRE-LAUNCH -->
+  <section class="section-dark contact">
+    <div class="container">
+
+      <h2>We're Getting Things <span class="orange">Dialed In.</span></h2>
+
+      <p>
+        The full website, online store and Arizona field service are coming soon.
+      </p>
+
+      <div class="contact-info">
+        <a href="tel:+14804660918">(480) 466-0918</a>
+        <br>
+        TheScaleGuyAZ.com
+      </div>
+
+      <div class="bathroom-scale">
+        <strong>Yes, your bathroom scale is probably not accurate.</strong>
+        <span>Please don't call me about it.</span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <footer>
+    © 2026 <strong>The Scale Guy</strong> • Arizona
+  </footer>
+
+</body>
+</html>
